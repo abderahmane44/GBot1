@@ -8,6 +8,51 @@ console.log("log");
 });
 
 
+client.on("message", message => {
+	var prefix = "+";
+ if (message.content === ("=help public") {
+	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+			  اوامر عامة
+❖+allbots ~ لعرض جميع البوتات الي بالسيرفر
+❖server ~يعرض لك معلومات عن السيرفر
+❖+bot ~ يعرض لك كل معلومات البوت
+❖+count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
+❖+invites ~ يعرض لك  عدد انفايتاتك بالسيرفر 
+❖+invite-codes ~ يعرض لك روابط الانفايتات حكك في السيرفر 
+❖+cal ~ اله حاسبة
+❖+trans <language> <any thing> ~ يترجم لك الي تبيه من اي لغة
+❖+short ~ يختصر لك رابط كبير الى رابط صغير
+❖+tag ~ يكتب لك الكلمة بشكل جميل وكبير
+❖+google ~ للبحث في قوقل عن طريق الدسكورد
+❖+perms ~ يعرض لك برمشناتك بالسيرفر
+❖+za5 ~ يزخرف لك كلمة او جملة
+❖+rooms ~ يعرض لك كل الرومات الي بالسيرفر مع عددها
+❖+roles ~ يعرض لك كل الرانكات بالسيرفر بشكل جميل
+❖+emojilist ~ يعرض لك كل الايموجيات الي بالسيرفر
+❖+say ~ يكرر الكلام الي تكتبو
+❖+image ~ صورة السيرفر
+❖+members ~ يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص
+❖+id ~ معلومات عنك
+❖+bans ~ عدد الاشخاص المبندة 
+❖+avatar ~ صورتك او صورة الي تمنشنو
+❖+embed ~ يكرر الي تقولو بشكل حلو
+❖+emoji <any things> ~ لتحويل اي كلمه تقولها الي ايموجي
+❖+invite ~ لدعوة البوت الى سيرفرك
+❖+support ~ سيرفر الدعم
+❖+contact ~ ارسال اقتراح او لمراسلة صاحب البوت
+❖+topinv لعرض اكثر الاعضاء الذين يدعون
+
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+   
+
+
 
 client.on("message", msg => {//Alpha Codes 
     var Alpha = '+';//البرفكس
@@ -69,41 +114,4 @@ var prefix = '+';//البرفكس
 
 
 
- const devs = ["538349275713634315"];
-const adminprefix = ["+"];
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!devs.includes(message.author.id)) return;
-
-  if (message.content.startsWith(adminprefix + 'ply')) {
-    client.user.setGame(argresult);
-      message.channel.send(`**✅   ${argresult}**`)
-  } else
-     if (message.content === (adminprefix + "leave")) {
-    message.guild.leave();
-  } else
-  if (message.content.startsWith(adminprefix + 'wt')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(`**✅   ${argresult}**`)
-  } else
-  if (message.content.startsWith(adminprefix + 'ls')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(`**✅   ${argresult}**`)
-  } else
-  if (message.content.startsWith(adminprefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");
-      message.channel.send(`**✅**`)
-  }
-  if (message.content.startsWith(adminprefix + 'setname')) {
-  client.user.setUsername(argresult).then
-      message.channel.send(`Changing The Name To ..**${argresult}** `)
-} else
-if (message.content.startsWith(adminprefix + 'setavatar')) {
-  client.user.setAvatar(argresult);
-    message.channel.send(`Changing The Avatar To :**${argresult}** `);
-}
-});
  
-
-
-client.login(process.env.TOKEN); 
