@@ -69,14 +69,32 @@ var prefix = '+';//البرفكس
 
  
 client.on('message', message => {
-    if(message.content.includes('discord.gg')){
-                                            if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
-        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-        message.delete()
-    return message.reply(`** ممنوع نشر الروابط :angry: ! **`)
-    }
-}
+    if (message.content === '....') {
+        message.reply('♪أطلـَـق من نقط, يلــبى بس ☆');
+      }
 });
+
+
+client.on('message', message => {
+    if (message.content === '...') {
+        message.reply('♪أطلـَـق من نقط, يلــبى بس ☆');
+      }
+});
+
+
+client.on('message', message => {
+    if (message.content === '..') {
+        message.reply('♪أطلـَـق من نقط, يلــبى بس ☆');
+      }
+});
+
+client.on('message', message => {
+    if (message.content === '.') {
+        message.reply('♪أطلـَـق من نقط, يلــبى بس ☆');
+      }
+});
+
+
 
    
 
