@@ -1,4 +1,16 @@
-const prefix = "+";
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const bot = new Discord.Client();
+const ms = require("ms");
+const fs = require('fs');
+const moment = require('moment');
+const request = require('request');
+const dateFormat = require('dateformat');
+const r1 = require('snekfetch');
+const jimp = require('jimp')
+const math = require('math-expression-evaluator'); 
+
+const prefix = !";
 
 
 client.on('ready', () => {
@@ -6,7 +18,7 @@ client.on('ready', () => {
   console.log(`servers! [ " ${client.guilds.size} " ]`);
   console.log(`Users! [ " ${client.users.size} " ]`);
   console.log(`channels! [ " ${client.channels.size} " ]`);
-
+});
 
 const developers = ['538349275713634315'];
 const admin = "+";
