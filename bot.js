@@ -16,23 +16,23 @@ client.on("message", message => {
       .setColor("#8325c0") 
       .setDescription(`
 	  
-	       Help Commands: 
+	    **   Help Commands: **
 
 			 
-${prefix}public ⥨ الاوامر العامة
+${prefix}public ⥨** الاوامر العامة**
 
-${prefix}admin ⥨ اوامر الادارة
+${prefix}admin ⥨** اوامر الادارة**
 			 
-${prefix}games ⥨ اوامر الالعاب
+${prefix}games ⥨** اوامر الالعاب**
 
-${prefix}music ⥨ اوامر الموسيقى
+${prefix}music ⥨** اوامر الموسيقى**
 
 Other Commands:
 
 
-${prefix}invite ⥨ لدعوة البوت الى سيرفرك
+${prefix}invite ⥨** لدعوة البوت الى سيرفرك**
 
-${prefix}support ⥨ لدخول سيرفر الدعم
+${prefix}support ⥨** لدخول سيرفر الدعم**
 
 
 	  `)
@@ -51,15 +51,15 @@ ${prefix}support ⥨ لدخول سيرفر الدعم
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
 	  
-الاوامــر الــعـــامـــة
+**الاوامــر الــعـــامـــة**
 
-⤠ +invite ⥨ لدعوة البوت الى سيرفرك
-⤠ +server ⥨ معلومات عن السيرفر                      
-⤠ +say ⥨ البوت يردد كلامك         
-⤠ +setcolor ⥨ عشان تغير لونك ملاحظة لازم تحط رقم اللون                                          
-⤠ +bot ⥨ معلومات عن البوت
-⤠ +ping ⥨ لمعرفه سرعه البوت
-⤠ +members ⥨ معلومات عن الاعضاء
+**⤠ +invite ⥨ لدعوة البوت الى سيرفرك**
+**⤠ +server ⥨ معلومات عن السيرفر**                      
+**⤠ +say ⥨ البوت يردد كلامك**         
+**⤠ +setcolor ⥨ عشان تغير لونك ملاحظة لازم تحط رقم اللون**                                          
+**⤠ +bot ⥨ معلومات عن البوت**
+**⤠ +ping ⥨ لمعرفه سرعه البوت**
+**⤠ +members ⥨ معلومات عن الاعضاء**
 **⤠ +emojilist ⥨ لعرض الايموجي حقت السيرفر**
 **⤠ +id ⥨ لمعرفة معلومات حسابك**
 **⤠ +avatar ⥨ لاعطائك صورة الشخص اللي منشنته مع الرابط**
