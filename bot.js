@@ -7444,3 +7444,23 @@ client.on('message',function(message) {
        .addField("**# - Reason:**",toReason,true)
        .addField("**# - By:**",message.author,true)
        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+client.login(process.env.BOT_TOKEN);
+
