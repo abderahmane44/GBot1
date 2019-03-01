@@ -60,16 +60,16 @@ ${prefix}support ⥨ لدخول سيرفر الدعم
 ⤠ +bot ⥨ معلومات عن البوت
 ⤠ +ping ⥨ لمعرفه سرعه البوت
 ⤠ +members ⥨ معلومات عن الاعضاء
-⤠ +emojilist ⥨ لعرض الايموجي حقت السيرفر
-⤠ +id ⥨ لمعرفة معلومات حسابك
-⤠ +avatar ⥨ لاعطائك صورة الشخص اللي منشنته مع الرابط
-⤠ +link ⥨ يعطيك رابط انفايت للسيرفر اللي انت فيه
-⤠ +trans <language> <any thing> ⥨ يترجم لك الي تبيه من اي لغة
-⤠ +short ⥨ لاختصار الروابط
-⤠ +embed ⥨ كتابة كلامك داخل امبد
-⤠ +tag ⥨ يكتب لك الكلمة بشكل جميل وكبير
-⤠ +contact ⥨ لارسال رسالة لصاحب البوت
-⤠ +support ⥨ لدخول سيرفر دعم البوت
+**⤠ +emojilist ⥨ لعرض الايموجي حقت السيرفر**
+**⤠ +id ⥨ لمعرفة معلومات حسابك**
+**⤠ +avatar ⥨ لاعطائك صورة الشخص اللي منشنته مع الرابط**
+**⤠ +link ⥨ يعطيك رابط انفايت للسيرفر اللي انت فيه**
+**⤠ +trans <language> <any thing> ⥨ يترجم لك الي تبيه من اي لغة**
+**⤠ +short ⥨ لاختصار الروابط**
+**⤠ +embed ⥨كتابة كلامك داخل امبد **
+**⤠ +tag ⥨ يكتب لك الكلمة بشكل جميل وكبير**
+**⤠ +contact ⥨ لارسال رسالة لصاحب البوت**
+**⤠ +support ⥨ لدخول سيرفر دعم البوت**
 	  
 `)
 
@@ -81,7 +81,7 @@ message.author.sendEmbed(embed)
 
  client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = ['In 1 Server','+help | +inv','In 77 Server','+help | +inv','In 1 Server'];
+    var setGame = ['In 1 Server','+help | +inv','In 1 Server','+help | +inv','In 1 Server'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -117,7 +117,14 @@ client.on("message", msg => {
   }
 });
 
-
+  client.on("message", message => {
+      if (message.content === "+ping") {
+      const embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
+  message.channel.sendEmbed(embed);
+    }
+});
 client.on('message', message => {
 	var prefix = "+"
   if (message.author.x5bz) return;
