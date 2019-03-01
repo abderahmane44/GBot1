@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+"const Discord = require("discord.js");
 const client = new Discord.Client();
 const bot = new Discord.Client();
 const ms = require("ms");
@@ -10,7 +10,7 @@ const r1 = require('snekfetch');
 const jimp = require('jimp')
 const math = require('math-expression-evaluator'); 
 
-const prefix = !";
+const prefix = "+";
 
 
 client.on('ready', () => {
