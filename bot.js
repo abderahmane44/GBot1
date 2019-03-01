@@ -106,11 +106,11 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
 
-اوامـــر الالـــعـــاب
+**اوامـــر الالـــعـــاب**
 
-⤠ *عشان تعطي الشخص اللي تمنشنه لكمة ⥨ لكمة         
-⤠ *لعبة هل تعلم ⥨ هل تعلم         
-⤠ *يعطيك بعض الاذكار ⥨ اذكار    
+**⤠ *عشان تعطي الشخص اللي تمنشنه لكمة ⥨ لكمة  **       
+**⤠ *لعبة هل تعلم ⥨ هل تعلم  **       
+**⤠ +يعطيك بعض الاذكار ⥨ اذكار   ** 
 
 `)
 
@@ -174,7 +174,7 @@ message.author.sendEmbed(embed)
 }); 
 
 client.on("message", message => {
-     var prefix = "*";
+     var prefix = "+";
     if(message.content.startsWith(prefix + 'v2min')) {
      let args = message.content.split(" ").slice(1);
        var nam = args.join(' ');
@@ -210,7 +210,7 @@ if (message.content.startsWith("*add.r")) {
 var AsciiTable = require('ascii-data-table').default
 client.on('message', message =>{
 
-    if(message.content == "*roles"){
+    if(message.content == "+roles"){
         var 
         ros=message.guild.roles.size,
         data = [['Rank', 'RoleName']]
