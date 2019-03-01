@@ -28,7 +28,6 @@ client.user.setGame(` =help | Legend System ✨ `,"https://www.twitch.tv/S-F")
   console.log('')
   console.log('')
 });
-const prefix = "+";
 
 
 client.on('ready', () => {
