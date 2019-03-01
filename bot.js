@@ -90,7 +90,7 @@ client.on('message', function(msg) {
       });
 
 
-
+ 
 client.on('message', async message =>{
   if (message.author.boss) return;
 	var prefix = "+";
