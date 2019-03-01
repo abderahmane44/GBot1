@@ -1,14 +1,11 @@
-const prefix ="+";
-const Discord = require('discord.js');
-const client = new Discord.Client();
-
+const prefix = "+";
 
 
 client.on('ready', () => {
- console.log("bot online"); 
-console.log("log");
-});
-
+  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`servers! [ " ${client.guilds.size} " ]`);
+  console.log(`Users! [ " ${client.users.size} " ]`);
+  console.log(`channels! [ " ${client.channels.size} " ]`);
 
 
 const developers = ['538349275713634315'];
