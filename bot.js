@@ -181,6 +181,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return m
                        message.channel.send({ embed: embed });
                         return;
                     }
+     });
 
 
 
