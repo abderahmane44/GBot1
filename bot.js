@@ -435,7 +435,41 @@ const cuttweet = [     'كت تويت ‏| تخيّل لو أنك سترسم ش�
     }
 });	
 
-   
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+         client.on('message', message => {
+            if (message.content === 'هلا') {
+              message.channel.send(' هِلَآ بّـيّك:heart: ');
+               
+
+            }
+}); 
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+         client.on('message', message => {
+            if (message.content === 'برب') {
+              message.channel.send(' تُيّتُ:heart: ');
+               
+
+            }
+}); 
+
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+         client.on('message', message => {
+            if (message.content === 'باك') {
+              message.channel.send(' وِلَكمِ بّـآك مِنٌوِر يّآ عَ ـسًسًـلَ:heart: ');
+               
+
+            }
+}); 
 
 const gamestats = [`Oméega ,`,`+help`,`By | NoHaxJustAbdou`,`TOP `]
 var index = 0
