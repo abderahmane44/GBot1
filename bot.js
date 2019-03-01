@@ -2,12 +2,15 @@ const prefix ="+";
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+
+const prefix = "+";
+
 client.on('ready', () => {
  console.log("bot online"); 
 console.log("log");
 });
 
-const prefix = "+";
+
 
 const developers = ['538349275713634315'];
 const admin = "+";
