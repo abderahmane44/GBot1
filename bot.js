@@ -7,7 +7,7 @@ client.on('ready', () => {
 console.log("log");
 });
 
-const prefix = !";
+const prefix = "+";
 
 const developers = ['538349275713634315'];
 const admin = "+";
