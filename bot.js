@@ -335,20 +335,6 @@ setInterval(function(){})
     }
 });
 
-
-
-
-
-  client.on('messageUpdate', (oldRebel, newRebel) => {
-    console.log("شخص ما حاول النشر");
-   if (newRebel.content.toUpperCase().match(/DISCORD.GG/i))
-    {
-        console.log(newRebel.author.name + " حاول النشر عبر تعديل الرسآلة  " + newRebel);
-           newRebel.delete().catch(O_o=>{}); 
-           newRebel.author.send("ممنوع نشر الروابط");
-    }
-});
-  
 	    
 	    
 
@@ -558,7 +544,7 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("By : ! ~ D e v i l")
+     .setFooter("By :| NoHaxJustAbdou")
                                                 
 
 message.channel.send(embed);
@@ -744,8 +730,8 @@ client.on('message', message => {
                 if(message.content === prefix + "invite") {
                     let embed = new Discord.RichEmbed ()
                     embed.setTitle("**:point_right: Click Here**")
-                  .setFooter(`King Bot `,'https://cdn.discordapp.com/attachments/457004554869932033/471106003249659914/image.jpg')
-                  .setURL("https://goo.gl/ADmgeW");
+                  .setFooter(`Oméega Bot , `,'https://cdn.discordapp.com/attachments/539814933215576066/550770590248599572/-_Omeega_-_system.png')
+                  .setURL("https://discordapp.com/oauth2/authorize?client_id=550723011150348300&permissions=8&scope=bot");
                    message.channel.sendEmbed(embed);
                   }
 });
