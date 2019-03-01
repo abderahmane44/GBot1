@@ -96,7 +96,18 @@ message.author.sendEmbed(embed)
     }, ms);
 
 });
-	  
+
+
+
+	  client.on("message", message => {
+ if (message.content === "+admin") {
+        message.react("📫")
+	           message.react("✅")
+const embed = new Discord.RichEmbed() 
+      .setColor("#8325c0")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`
+	    
 اوامـــر الادمـــنـــيــــة
 
 ⤠ +vb ⥨ لمنع الشخص اللي تمنشنه من دخول الرومات الصوتية
