@@ -90,7 +90,16 @@ client.on('message', function(msg) {
 
 
 
-
+client.on('message', message => {
+        if (message.content === "+inv") {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
+        .setTitle(`:small_orange_diamond: Click Here `)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=489909153368768523&permissions=8&scope=bot`)        
+     message.channel.sendEmbed(embed);
+       }
+   });
 
 
 client.on("message", (message) => {
