@@ -3,7 +3,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
-const prefix = "+";
 
 client.on('ready', () => {
  console.log("bot online"); 
@@ -81,7 +80,7 @@ client.on('ready', function(){//npm i ms
 //=================================== Commands ===================================
 
 
-
+const prefix = "+";
 
 client.on('message', message => {
             if(!message.channel.guild) return;
