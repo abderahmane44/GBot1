@@ -110,7 +110,7 @@ client.on('message', message => {
   if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("**I Don't Have ` BAN_MEMBERS ` Permission**");
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
-  if (message.mentions.users.size < 1) return message.reply("**منشن الشخص مرد طرده**");
+  if (message.mentions.users.size < 1) return message.reply("**منشن الشخص مراد طرده**");
   if(!reason) return message.reply ("**اكتب السبب**");
   if (!message.guild.member(user)
   .bannable) return message.reply("**لا يمكنني طرد شخص اعلى من رتبتي**");
