@@ -110,10 +110,10 @@ client.on('message', message => {
   if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("**I Don't Have ` BAN_MEMBERS ` Permission**");
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
-  if (message.mentions.users.size < 1) return message.reply("**Mention SomeOne**");
-  if(!reason) return message.reply ("**Write A Reason**");
+  if (message.mentions.users.size < 1) return message.reply("**منشن الشخص مرد طرده**");
+  if(!reason) return message.reply ("**اكتب السبب**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**I Cant BAN SomeOne High Than My Rank**");
+  .bannable) return message.reply("**لا يمكنني طرد شخص اعلى من رتبتي**");
 
   message.guild.member(user).ban(7, user);
 
@@ -121,9 +121,9 @@ client.on('message', message => {
   .setAuthor(`BANNED!`, user.displayAvatarURL)
   .setColor("RANDOM")
   .setTimestamp()
-  .addField("**User:**",  '**[ ' + `${user.tag}` + ' ]**')
-  .addField("**By:**", '**[ ' + `${message.author.tag}` + ' ]**')
-  .addField("**Reason:**", '**[ ' + `${reason}` + ' ]**')
+  .addField("**الشخص:**",  '**[ ' + `${user.tag}` + ' ]**')
+  .addField("**من قبل:**", '**[ ' + `${message.author.tag}` + ' ]**')
+  .addField("**السبب:**", '**[ ' + `${reason}` + ' ]**')
   message.channel.send({
     embed : banembed
   })
