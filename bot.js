@@ -33,7 +33,7 @@ client.on('ready', () => {
 
 
    client.on('message', message => {
-    const prefix = '*'
+    const prefix = '+'
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'id')) {
 var year = message.author.createdAt.getFullYear()
@@ -204,7 +204,7 @@ client.on('message', function(msg) {
 
 
 client.on("message", message => {
-	var prefix = "*";
+	var prefix = "+";
  if (message.content === "*help") {
   const embed = new Discord.RichEmbed()  
       .setColor("#8325c0") 
@@ -213,7 +213,7 @@ client.on("message", message => {
 	       Help Commands: 
 
 			 
-${prefix}public ⥨ الاوامر العامة
+**${prefix}public ⥨ الاوامر العامة
 
 ${prefix}admin ⥨ اوامر الادارة
 			 
@@ -226,7 +226,7 @@ Other Commands:
 
 ${prefix}invite ⥨ لدعوة البوت الى سيرفرك
 
-${prefix}support ⥨ لدخول سيرفر الدعم
+${prefix}support ⥨ لدخول سيرفر الدعم**
 
 
 	  `)
@@ -237,7 +237,7 @@ ${prefix}support ⥨ لدخول سيرفر الدعم
    
 
    client.on("message", message => {
- if (message.content === "*public") {
+ if (message.content === "+public") {
         message.react("📫")
 	           message.react("✅")
   const embed = new Discord.RichEmbed() 
@@ -247,23 +247,23 @@ ${prefix}support ⥨ لدخول سيرفر الدعم
 	  
 الاوامــر الــعـــامـــة
 
-⤠ *invite ⥨ لدعوة البوت الى سيرفرك
-⤠ *server ⥨ معلومات عن السيرفر                      
-⤠ *say ⥨ البوت يردد كلامك         
-⤠ *setcolor ⥨ عشان تغير لونك ملاحظة لازم تحط رقم اللون                                          
-⤠ *bot ⥨ معلومات عن البوت
-⤠ *ping ⥨ لمعرفه سرعه البوت
-⤠ *members ⥨ معلومات عن الاعضاء
-⤠ *emojilist ⥨ لعرض الايموجي حقت السيرفر
-⤠ *id ⥨ لمعرفة معلومات حسابك
-⤠ *avatar ⥨ لاعطائك صورة الشخص اللي منشنته مع الرابط
-⤠ *link ⥨ يعطيك رابط انفايت للسيرفر اللي انت فيه
-⤠ *trans <language> <any thing> ⥨ يترجم لك الي تبيه من اي لغة
-⤠ *short ⥨ لاختصار الروابط
-⤠ *embed ⥨ كتابة كلامك داخل امبد
-⤠ *tag ⥨ يكتب لك الكلمة بشكل جميل وكبير
-⤠ *contact ⥨ لارسال رسالة لصاحب البوت
-⤠ *support ⥨ لدخول سيرفر دعم البوت
+⤠ +invite ⥨ لدعوة البوت الى سيرفرك
+⤠ +server ⥨ معلومات عن السيرفر                      
+⤠ +say ⥨ البوت يردد كلامك         
+⤠ +setcolor ⥨ عشان تغير لونك ملاحظة لازم تحط رقم اللون                                          
+⤠ +bot ⥨ معلومات عن البوت
+⤠ +ping ⥨ لمعرفه سرعه البوت
+⤠ +members ⥨ معلومات عن الاعضاء
+⤠ +emojilist ⥨ لعرض الايموجي حقت السيرفر
+⤠ +id ⥨ لمعرفة معلومات حسابك
+⤠ +avatar ⥨ لاعطائك صورة الشخص اللي منشنته مع الرابط
+⤠ +link ⥨ يعطيك رابط انفايت للسيرفر اللي انت فيه
+⤠ +trans <language> <any thing> ⥨ يترجم لك الي تبيه من اي لغة
+⤠ +short ⥨ لاختصار الروابط
+⤠ +embed ⥨ كتابة كلامك داخل امبد
+⤠ +tag ⥨ يكتب لك الكلمة بشكل جميل وكبير
+⤠ +contact ⥨ لارسال رسالة لصاحب البوت
+⤠ +support ⥨ لدخول سيرفر دعم البوت
 	  
 `)
 
@@ -304,7 +304,7 @@ client.channels.get("470259562121920512").sendEmbed(embed)
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = ['In 77 Server','*help | *invite','In 77 Server','*help | *invite','In 77 Server'];
+    var setGame = ['In 77 Server','+help | +invite','In 77 Server','+help | +invite','In 77 Server'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -324,7 +324,7 @@ client.on('ready', function(){
 
 					client.on('message', message => {
           let args = message.content.split(' ').slice(1);
-   if(message.content.split(' ')[0] == '*setcolor'){
+   if(message.content.split(' ')[0] == '+setcolor'){
            const embedd = new Discord.RichEmbed()
      .setFooter('Requested by '+message.author.username, message.author.avatarURL)
    .setDescription(`**لا يوجد لون بهذا الأسم ** :x: `)
@@ -430,7 +430,7 @@ client.on('message', message => {
 
 
 client.on('message', function(message) {
-	const myID = "244888652004458497";
+	const myID = "538349275713634315";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -529,7 +529,7 @@ client.on('message', function(message) {
 
 
 client.on('message', msg => {
-  if (msg.content === '*public') {
+  if (msg.content === '+public') {
     msg.reply(':envelope: | تم ارسال الاوامر العامة في الخاص');
   }
 });
@@ -537,13 +537,13 @@ client.on('message', msg => {
    
 
 client.on('message', msg => {
-  if (msg.content === '*admin') {
-    msg.reply(':envelope: | تم ارسال اوامر الادمنية في الخاص');
+  if (msg.content === '+admin') {
+    msg.reply(':envelope: | تم ارسال اوامر الادمنية في الخاص')
   }
 });
 
 client.on('message', msg => {
-  if (msg.content === '*games') {
+  if (msg.content === '+games') {
     msg.reply(':envelope: | تم ارسال اوامر الالعاب في الخاص');
   }
 });
@@ -551,7 +551,7 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-  if (msg.content === '*music') {
+  if (msg.content === '+music') {
     msg.reply(':envelope: | تم ارسال اوامر الموسيقى في الخاص');
   }
 });
@@ -559,7 +559,7 @@ client.on('message', msg => {
 
    
 client.on('message' , message => {
-var prefix = "*"
+var prefix = "+"
 
 if (message.author.bot) return;
 if (message.content.startsWith(prefix + "contact")) {
@@ -583,7 +583,7 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("By : ! ~ D e v i l")
+     .setFooter("By : - Up | Skillz , - 🎶 .")
                                                 
 
 message.channel.send(embed);
@@ -642,7 +642,7 @@ client.on("guildMemberAdd", member => {
 
 
 client.on('message', message => { 
-	var prefix = "*";
+	var prefix = "+";
  let args = message.content.split(' ').slice(1);
     if(message.content.startsWith(prefix + 'short')) {
     if(!message.channel.guild) return;  
@@ -662,7 +662,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	var prefix = "*";
+	var prefix = "+";
 if (message.content.startsWith(prefix + 'tag')) {
     let args = message.content.split(" ").slice(1);
 if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');  
@@ -701,10 +701,10 @@ if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');
 
    
    client.on("message", message => {
-  if (message.content === "*avatar") {
+  if (message.content === "+avatar") {
    const embed = new Discord.RichEmbed()
        .setColor('RANDOM') 
-       .setFooter('By ! ~ D e v i l')
+       .setFooter('By - Up | Skillz , - 🎶 .')
        .setThumbnail(message.author.avatarURL)
        .addField(message.author.displayAvatarURL)
  message.channel.send(embed);
@@ -718,7 +718,7 @@ if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');
  const Langs = ['afrikaans', 'albanian', 'amharic', 'arabic', 'armenian', 'azerbaijani', 'bangla', 'basque', 'belarusian', 'bengali', 'bosnian', 'bulgarian', 'burmese', 'catalan', 'cebuano', 'chichewa', 'chinese simplified', 'chinese traditional', 'corsican', 'croatian', 'czech', 'danish', 'dutch', 'english', 'esperanto', 'estonian', 'filipino', 'finnish', 'french', 'frisian', 'galician', 'georgian', 'german', 'greek', 'gujarati', 'haitian creole', 'hausa', 'hawaiian', 'hebrew', 'hindi', 'hmong', 'hungarian', 'icelandic', 'igbo', 'indonesian', 'irish', 'italian', 'japanese', 'javanese', 'kannada', 'kazakh', 'khmer', 'korean', 'kurdish (kurmanji)', 'kyrgyz', 'lao', 'latin', 'latvian', 'lithuanian', 'luxembourgish', 'macedonian', 'malagasy', 'malay', 'malayalam', 'maltese', 'maori', 'marathi', 'mongolian', 'myanmar (burmese)', 'nepali', 'norwegian', 'nyanja', 'pashto', 'persian', 'polish', 'portugese', 'punjabi', 'romanian', 'russian', 'samoan', 'scottish gaelic', 'serbian', 'sesotho', 'shona', 'sindhi', 'sinhala', 'slovak', 'slovenian', 'somali', 'spanish', 'sundanese', 'swahili', 'swedish', 'tajik', 'tamil', 'telugu', 'thai', 'turkish', 'ukrainian', 'urdu', 'uzbek', 'vietnamese', 'welsh', 'xhosa', 'yiddish', 'yoruba', 'zulu'];
 
 client.on('message', message => {
-	var prefix = "*";
+	var prefix = "+";
 if (message.content.startsWith(prefix + 'trans')) {
     let args = message.content.split(" ").slice(1);
     if (!args[0]) {
@@ -768,11 +768,11 @@ if (message.content.startsWith(prefix + 'trans')) {
 
 
    client.on('message', message => {
-     if (message.content === "*support") {
+     if (message.content === "+support") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :scales:سيرفر الدعم:scales:  **" , "  **https://discord.gg/feMu8XW**")
+  .addField(" ** :scales:سيرفر الدعم:scales:  **" , "  **https://discord.gg/5v7TKCW**")
      
      
   message.channel.sendEmbed(embed);
@@ -787,8 +787,8 @@ client.on('message', message => {
                 if(message.content === prefix + "invite") {
                     let embed = new Discord.RichEmbed ()
                     embed.setTitle("**:point_right: Click Here**")
-                  .setFooter(`King Bot `,'https://cdn.discordapp.com/attachments/457004554869932033/471106003249659914/image.jpg')
-                  .setURL("https://goo.gl/ADmgeW");
+                  .setFooter(`Oméega Bot , `,'https://cdn.discordapp.com/attachments/539814933215576066/550770590248599572/-_Omeega_-_system.png')
+                  .setURL("https://discordapp.com/oauth2/authorize?client_id=550723011150348300&permissions=8&scope=bot");
                    message.channel.sendEmbed(embed);
                   }
 });
@@ -800,7 +800,7 @@ client.on('message', message => {
   
   
   client.on("message", message => {
-      if (message.content === "*ping") {
+      if (message.content === "+ping") {
       const embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -812,7 +812,7 @@ client.on('message', message => {
 
 
 client.on('message', message => { 
-let PREFIX = '*'
+let PREFIX = '+'
     if (message.content.startsWith(PREFIX + 'emojilist')) {
 
         const List = message.guild.emojis.map(e => e.toString()).join(" ");
@@ -848,7 +848,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("*bot")) {
+    if (message.content.startsWith("+bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -860,7 +860,7 @@ client.on('message', message => {
             .addField('``السيرفرات🌐``', [client.guilds.size], true)
             .addField('``المستخدمين👥``' ,`[ ${client.users.size} ]` , true)
 	    .addField('``الرومات💭``' , `[ ${client.channels.size} ]` , true)
-			      .addField('``البرفكس✴️``' , `[ * ]` , true)
+			      .addField('``البرفكس✴️``' , `[ + ]` , true)
 			      .setFooter(' ￼ ')
     })
 }
@@ -871,7 +871,7 @@ client.on('message', message => {
    
    client.on('message', message => {
 
-    if (message.content.startsWith("*link")) {        
+    if (message.content.startsWith("+link")) {        
   message.channel.createInvite({
         thing: true,
         maxUses: 100,
@@ -902,7 +902,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-            var prefix = "*";
+            var prefix = "+";
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
 
@@ -928,7 +928,7 @@ client.on('message', message => {
    
    
    client.on("message", message => {
- if (message.content === "*admin") {
+ if (message.content === "+admin") {
         message.react("📫")
 	           message.react("✅")
 const embed = new Discord.RichEmbed() 
