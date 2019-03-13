@@ -301,24 +301,12 @@ client.channels.get("470259562121920512").sendEmbed(embed)
 
 
 
-
-client.on('ready', function(){
-    var ms = 10000 ;
-    var setGame = ['In 77 Server','+help | +invite','In 77 Server','+help | +invite','In 77 Server'];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/D.JPEI`);
-    }, ms);
-
+client.on('ready', () => {
+  client.user.setPresence('dnd')
+  client.user.setActivity(`+Help | Servers: ${client.guilds.size} | Version: 1.0.1`)
+  console.log(' Logged in as Infinty Bot ')
 });
+
 
 
 
