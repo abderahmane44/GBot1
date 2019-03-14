@@ -608,7 +608,7 @@ client.on("guildMemberAdd", member => {
    
   client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "244888652004458497") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "538349275713634315") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
@@ -686,19 +686,25 @@ if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');
       });
 
 
-
-   
-   client.on("message", message => {
-  if (message.content === "+avatar") {
-   const embed = new Discord.RichEmbed()
-       .setColor('RANDOM') 
-       .setFooter('By - Up | Skillz , - 🎶 .')
-       .setThumbnail(message.author.avatarURL)
-       .addField(message.author.displayAvatarURL)
- message.channel.send(embed);
-}
+client.on('message', message => {
+    var prefix = '+'
+    if (message.content.startsWith(prefix + "avatar")) {
+        var mentionned = message.mentions.users.first();
+    var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      } else {
+          var x5bzm = message.author;
+          
+      }
+        const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setImage(`${x5bzm.avatarURL}`)
+      message.channel.sendEmbed(embed);
+    }
 });
-
+   
+   
 
   
 
@@ -2099,7 +2105,9 @@ message.author.sendEmbed(embed)
 
 
 
-
+client.on("guildMemberAdd", member => {
+  client.channels.find('id', '555072038335807491').send(`**welcome to Oméega Bot , : [ ${member} ]**`)
+});
 
 
 
