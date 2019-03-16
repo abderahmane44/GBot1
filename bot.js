@@ -130,7 +130,6 @@ setTimeout(function(){
       tomute.removeRole(muterole.id);
       message.channel.send(`<@${tomute.id}> **انقضى الوقت وتم فك الميوت عن الشخص**:white_check_mark: `);
     }, ms(mutetime));
- const prefix = "+"; // ضع البريفكس الخاص بك هنا
 
  client.on('message',async message => {
   if(message.author.bot) return;
