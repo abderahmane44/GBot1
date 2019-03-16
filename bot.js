@@ -130,11 +130,12 @@ setTimeout(function(){
       tomute.removeRole(muterole.id);
       message.channel.send(`<@${tomute.id}> **انقضى الوقت وتم فك الميوت عن الشخص**:white_check_mark: `);
     }, ms(mutetime));
- 
+ const prefix = "+"; // ضع البريفكس الخاص بك هنا
+
  client.on('message',async message => {
   if(message.author.bot) return;
   if(message.channel.type === 'dm') return;
- 
+  const prefix = "+"; // ضع البريفكس الخاص بك هنا
   const args = message.content.split(' ');
   const credits = require('./credits.json');
   const path = './credits.json';
@@ -225,32 +226,7 @@ setTimeout(function(){
   }
 });
 
- client.on('message', async message => {
-    if (message.content.startsWith(prefix + "id")) {
-        let mem = message.mentions.members.first() || message.member;
-        let auth = message.mentions.users.first() || message.author;
-        const imageUrlRegex = /\?size=2048$/g;
-        const name = mem.displayName.length > 10 ? mem.displayName.substring(0, 11) + "..." : mem.displayName;
-
-        const {
-            body: ava
-        } = await get(auth.displayAvatarURL.replace(imageUrlRegex, "?size=128"));
-
-        const img = await readFile("./id_1.png");
-        const millis = new Date().getTime() - auth.createdAt.getTime();
-        const now = new Date();
-        const createdAt = millis / 1000 / 60 / 60 / 24;
-        const millisj = new Date().getTime() - mem.joinedAt.getTime();
-        const nowj = new Date();
-        const joinedAt = millisj / 1000 / 60 / 60 / 24;
-
-        if (!inv[mem.id + message.guild.id]) inv[mem.id + message.guild.id] = {
-            inviter: "Not stored in database",
-            totalSecs: 0
-        }
-
  
-  }
 if(command === `unmute`) {
   if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.sendMessage("**ليس لديك صلاحية لفك عن الشخص ميوت**:x: ").then(m => m.delete(5000));
 if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply("**I Don't Have `MANAGE_ROLES` Permission**").then(msg => msg.delete(6000))
