@@ -225,7 +225,29 @@ setTimeout(function(){
   }
 });
 
- 
+ client.on('message', async message => {
+    if (message.content.startsWith(prefix + "id")) {
+        let mem = message.mentions.members.first() || message.member;
+        let auth = message.mentions.users.first() || message.author;
+        const imageUrlRegex = /\?size=2048$/g;
+        const name = mem.displayName.length > 10 ? mem.displayName.substring(0, 11) + "..." : mem.displayName;
+
+        const {
+            body: ava
+        } = await get(auth.displayAvatarURL.replace(imageUrlRegex, "?size=128"));
+
+        const img = await readFile("./id_1.png");
+        const millis = new Date().getTime() - auth.createdAt.getTime();
+        const now = new Date();
+        const createdAt = millis / 1000 / 60 / 60 / 24;
+        const millisj = new Date().getTime() - mem.joinedAt.getTime();
+        const nowj = new Date();
+        const joinedAt = millisj / 1000 / 60 / 60 / 24;
+
+        if (!inv[mem.id + message.guild.id]) inv[mem.id + message.guild.id] = {
+            inviter: "Not stored in database",
+            totalSecs: 0
+        }
 
  
   }
